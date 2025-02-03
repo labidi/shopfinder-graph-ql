@@ -7,7 +7,7 @@ use Magento\Framework\GraphQl\Query\ResolverInterface;
 use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
 use Magento\Framework\Api\SearchCriteriaBuilder;
-use Saddemlabidi\ShopfinderApi\Api\ShopRepositoryInterface;
+use Saddemlabidi\Shopfinder\Api\ShopRepositoryInterface;
 
 class ShopList implements ResolverInterface
 {
