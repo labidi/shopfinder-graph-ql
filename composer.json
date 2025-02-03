@@ -1,0 +1,19 @@
+{
+  "name": "saddemlabidi/module-shopfinder-graph-ql",
+  "description": "Magento 2 module to implement GraphQl (Shopfinder).",
+  "require": {
+    "magento/framework": "*",
+    "magento/module-ui": "*",
+    "magento/module-backend": "*"
+  },
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "'Saddemlabidi\\ShopfinderGraphQl\\": ""
+    }
+  }
+}

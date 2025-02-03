@@ -1,0 +1,26 @@
+type Shop {
+    id: Int
+    identifier: String
+    name: String
+    country: String
+    image: String
+    longitude_latitude: String
+    created_at: String
+    updated_at: String
+}
+input ShopInput {
+    id: Int!
+    identifier: String
+    name: String
+    country: String
+    image: String
+    longitude_latitude: String
+}
+type Query {
+    shops: [Shop] @resolver(class: "Saddemlabidi\\ShopfinderGraphQl\\Model\\Resolver\\ShopList")
+    shop(identifier: String!): Shop @resolver(class: "Saddemlabidi\\ShopfinderGraphQl\\Model\\Resolver\\ShopByIdentifier")
+}
+type Mutation {
+    updateShop(input: ShopInput!): Shop @doc(description: "Update shop data") @resolver(class: "Saddemlabidi\\ShopfinderGraphQl\\Model\\Resolver\\UpdateShop")
+    deleteShop(id: Int!): Boolean @doc(description: "Delete a shop") @resolver(class: "Saddemlabidi\\ShopfinderGraphQl\\Model\\Resolver\\DeleteShop")
+}
